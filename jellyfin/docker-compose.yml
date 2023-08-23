@@ -9,7 +9,7 @@ services:
       - /home/raspberry/jellyfin/config:/config
       - /home/raspberry/jellyfin/cache:/cache
       - /media/usb/jellyfintestmoveies:/test
-      - /media/media/usb/jellyfinmediacrap:/media
+      - /media/usb/jellyfinmediacrap:/media
     restart: 'unless-stopped'
     # Optional - alternative address used for autodiscovery
     environment:
