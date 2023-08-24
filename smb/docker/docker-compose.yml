@@ -3,12 +3,12 @@ services:
   samba:
     image: dperson/samba
     container_name: samba
-    command: -g "log level = 2" -u "apple;apple" -s "share;/share;yes;no;no;apple"
+    command: -g "log level = 2" -u "raspberry;raspberry" -s "share;/share;yes;no;no;raspberry"
     ports:
     - 139:139
     - 445:445
     volumes:
-    - $HOME/smb/myfiles:/share
+    - $MEDIA/usb:/share
     environment:
     - USERID:1000
     - GROUPID:1000
