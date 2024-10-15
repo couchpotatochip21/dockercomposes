@@ -4,12 +4,14 @@ services:
     image: dperson/samba
     container_name: samba
     restart: always
-    command: -g "log level = 2" -u "raspberry;raspberry" -s "share;/share;yes;no;no;raspberry"
+    command: -g "log level = 2" -u "raspberry;raspberry" -s "share1;/share1;yes;no;no;raspberry" -s "ssd;/ssd;yes;no;no;raspberry" -s "oldnas;/oldnas;yes;no;no;raspberry"
     ports:
     - 139:139
     - 445:445
     volumes:
-    - /media/usb:/share
+    - /mnt/usb1:/share1
+    - /home/raspberry/ssd:/ssd
+    - /media/usb:/oldnas
     environment:
     - USERID:1000
     - GROUPID:1000
