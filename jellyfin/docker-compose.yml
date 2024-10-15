@@ -10,6 +10,7 @@ services:
       - /home/raspberry/jellyfin/cache:/cache
       - /media/usb/jellyfintestmoveies:/test
       - /media/usb/jellyfinmediacrap:/media
+      - /mnt/usb1:/mass
     restart: 'unless-stopped'
     # Optional - alternative address used for autodiscovery
     environment:
